@@ -31,6 +31,10 @@ const SideBar: React.FC<Props> = ({ toggleTheme }) => {
             <FollowSuggestion name = "Paulo Ozeia" nickname = "@pardaldejava" />
           ]}
         />
+          <List 
+           title="Escolha um tema "
+           elements={[<ThemeSelector toggleTheme={toggleTheme} />]}
+         />
         <List 
           title="Talvez você curta"
           elements={[<News />,<News />,<News />]}
@@ -38,14 +42,6 @@ const SideBar: React.FC<Props> = ({ toggleTheme }) => {
         <List 
           title="Talvez você curta"
           elements={[<News />,<News />,<News />]}
-        />
-        <List 
-          title="Talvez você curta"
-          elements={[<News />,<News />,<News />]}
-        />
-         <List 
-          title="Escolha um tema "
-          elements={[<ThemeSelector toggleTheme={toggleTheme} />]}
         />
         </Body>
       </StickyBox>
