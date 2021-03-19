@@ -36,9 +36,9 @@ export default createGlobalStyle `
     --outline: #2F3336;
     --retweet: #00C06B;
     --like: #E8265E;
-    --twitter: #33A1F2;
-    --twitter-dark-hover: #011017;
-    --twitter-light-hover: #2C8ED6;
+    --twitter: ${props => props.theme.colors.twitter};
+    --twitter-dark-hover: ${props => props.theme.colors.darkhover};
+    --twitter-light-hover: ${props => props.theme.colors.lighthover};;
     }
 `
 

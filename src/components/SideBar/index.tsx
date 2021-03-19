@@ -1,13 +1,19 @@
 import React from 'react';
 import StickyBox from 'react-sticky-box'
 
+import {ThemeColor} from '../../enums/themeColorEnum'
 import List from '../List'
 import FollowSuggestion from '../FollowSuggestion'
 import News from '../News'
+import ThemeSelector from '../ThemeSelector'
 
 import { Container, SearchWrapper, SearchInput, SearchIcon, Body} from './styles';
 
-const SideBar: React.FC = () => {
+interface Props {
+  toggleTheme(themeColor : ThemeColor ) : void; 
+}
+
+const SideBar: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <Container>
       <SearchWrapper>
@@ -36,6 +42,10 @@ const SideBar: React.FC = () => {
         <List 
           title="Talvez você curta"
           elements={[<News />,<News />,<News />]}
+        />
+         <List 
+          title="Escolha um tema "
+          elements={[<ThemeSelector toggleTheme={toggleTheme} />]}
         />
         </Body>
       </StickyBox>
