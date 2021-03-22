@@ -1,3 +1,8 @@
+
+### `SEE HOW IT WORKS`
+
+this project is running on this netlify address: https://wonderful-booth-62f1ca.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
